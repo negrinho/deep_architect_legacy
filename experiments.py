@@ -17,7 +17,7 @@ import sys
 def get_hyperparam_search_space(hps_type):
     # 2 * 8 * 2 * 4 = 128 for light 
     if hps_type == "light":
-        lr_inits = list( n  p.logspace(-2, -7, num=8) )
+        lr_inits = list( np.logspace(-2, -7, num=8) )
         rate_mults = [0.1, 0.5]
         rate_pats = [4, 8, 16, 32]
     # 2 * 32 * 8 * 8 = 4096 for heavy
@@ -142,8 +142,8 @@ def get_search_space(args):
     num_classes = 10
     ss = {'tfrefconv' : srch_sp.tfref_convnet_ss0(num_classes),
           'resnet' : srch_sp.resnet_ss0(num_classes),
-          'allconv' : srch_sp.allconvnet_cifar10_ss0(num_classes, in_d),
-          'allconv2' : srch_sp.allconvnet_cifar10_ss1(in_d),
+        #   'allconv' : srch_sp.allconvnet_cifar10_ss0(num_classes, in_d),
+        #   'allconv2' : srch_sp.allconvnet_cifar10_ss1(in_d),
           'deepconv' : srch_sp.deepconv_ss0(num_classes) }
     b_search = ss[ args['search_space_type'] ]
 
@@ -286,7 +286,7 @@ if __name__ == '__main__':
         searcher_type = sys.argv[3]
         seed = int(sys.argv[4])
 
-        run_searcher_comparison_experiment(search_space_type, searcher_type, seed)
+        run_searcher_comparison_experiment(searcher_type, search_space_type, seed)
         
     else:
         raise ValueError
