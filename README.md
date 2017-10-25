@@ -1,7 +1,7 @@
 # DeepArchitect: Automatically Designing and Training Deep Architectures
 
 This repository contains a Python implementation of the DeepArchitect framework described in 
-[our paper](http://www.cs.cmu.edu/~negrinho/assets/papers/deep_architect/deep_architect.pdf). 
+[our paper](https://arxiv.org/abs/1704.08792). 
 To get familiar with the framework, we recommend starting with 
 [this tutorial](https://github.com/negrinho/deep_architect/blob/master/tutorial.ipynb).
 
