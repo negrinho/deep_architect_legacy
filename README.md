@@ -1,8 +1,6 @@
 # DeepArchitect: Automatically Designing and Training Deep Architectures
 
-**IMPORTANT:**
-
-This repo is not under active development.
+**IMPORTANT:** This repo is not under active development.
 It contains a prototype for the ideas described in this [paper](https://arxiv.org/abs/1704.08792).
 See our [NeurIPS 2019 paper](https://arxiv.org/abs/1909.13404) for the latest developments.
 The code and documentation for the latest framework can be found [here](https://github.com/negrinho/deep_architect).
